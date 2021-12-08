@@ -18,8 +18,9 @@ let fullName = firstName + " " + secondName
  Insert `fullName`, `previousBest` and `newBest` where indicated. Print the value of `congratulations`.
  */
 let previousBest = 14392
+
 let newBest = 15125
-print("Congratulations, " + <IN + "! You beat your previous daily high score of <INSERT PREVIOUS HIGHEST STEPS HERE> steps by walking <INSERT NEW HIGHEST STEPS HERE> steps yesterday!")
+print("Congratulations, " + fullName + "! You beat your previous daily high score of \(previousBest) steps by walking \(newBest) steps yesterday!")
 /*:
 [Previous](@previous)  |  page 3 of 5  |  [Next: Exercise - String Equality and Comparison](@next)
  */
