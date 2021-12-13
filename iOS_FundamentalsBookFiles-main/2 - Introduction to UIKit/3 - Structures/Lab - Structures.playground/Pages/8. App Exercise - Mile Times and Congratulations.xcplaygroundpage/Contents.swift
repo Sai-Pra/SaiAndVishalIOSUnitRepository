@@ -12,7 +12,15 @@ struct RunningWorkout {
     var time: Double
     var elevation: Double
     
+    func averageMileTime() {
+        let dis = distance/1600
+        print(dis/time)
+    }
 }
+
+let work = RunningWorkout(distance: 1600, time: 10, elevation: 0)
+work.averageMileTime()
+
 
 
 /*:
@@ -27,8 +35,16 @@ struct Steps {
     mutating func takeStep() {
         steps += 1
     }
+    func willSet() {
+        if(steps == goal){
+            print("GOAL REACHED!")
+        }
+    }
+    
 }
-
+var step = Steps(steps: 9999, goal: 10000)
+step.takeStep()
+step.willSet()
 
 /*:
 [Previous](@previous)  |  page 8 of 10  |  [Next: Exercise - Type Properties and Methods](@next)

@@ -8,7 +8,18 @@ struct User {
     var userName: String
     var email: String
     var age: Int
+    var currentUser: String
+    
+    mutating func logIn(user: User){
+        self.currentUser = user.currentUser
+        self.email = user.email
+        self.age = user.age
+        self.userName = user.userName
+    }
+    
 }
+var user = User(userName: "saipranavvk", email: "saipranavvk@gmail.com", age: 17, currentUser: "Sai")
+print("\(user.userName) and \(user.email) and \(user.age) and \(user.currentUser)")
 
 
 /*:
@@ -21,3 +32,7 @@ struct User {
 /*:
 [Previous](@previous)  |  page 9 of 10  |  [Next: App Exercise - Type Properties and Methods](@next)
  */
+var user1 = User(userName: "vishal", email: "vishal@gmail.com", age: 17, currentUser: "Vishal")
+user.logIn(user: user1)
+
+print("\(user.userName) and \(user.email) and \(user.age) and \(user.currentUser)")
